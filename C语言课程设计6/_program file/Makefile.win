@@ -1,0 +1,121 @@
+# Project: AIÐ¡»ï°é
+# Makefile created by Dev-C++ 5.6.0
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o welcome.o deal_with_file.o login_registered.o function_menu.o function.o myAI.o desert.o end.o pre_progress.o tools.o calculator.o probality.o find_ch.o entertainment.o modify.o login.o registered.o notpad.o newtxt.o notpad_looktxt.o deletetxt.o renametxt.o mathematic.o math_test.o math_error.o game_tsp.o algorithm.o roll_chess.o console.o literature.o literature_administrator.o
+LINKOBJ  = main.o welcome.o deal_with_file.o login_registered.o function_menu.o function.o myAI.o desert.o end.o pre_progress.o tools.o calculator.o probality.o find_ch.o entertainment.o modify.o login.o registered.o notpad.o newtxt.o notpad_looktxt.o deletetxt.o renametxt.o mathematic.o math_test.o math_error.o game_tsp.o algorithm.o roll_chess.o console.o literature.o literature_administrator.o
+LIBS     = -L"D:/_my_programs/dev/Dev-Cpp/MinGW64/lib32" -L"D:/_my_programs/dev/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -m32 -g3
+INCS     = -I"D:/_my_programs/dev/Dev-Cpp/MinGW64/include" -I"D:/_my_programs/dev/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/_my_programs/dev/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include"
+CXXINCS  = -I"D:/_my_programs/dev/Dev-Cpp/MinGW64/include" -I"D:/_my_programs/dev/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/_my_programs/dev/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include" -I"D:/_my_programs/dev/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include/c++"
+BIN      = AIÐ¡»ï°é.exe
+CXXFLAGS = $(CXXINCS) -m32 -g3
+CFLAGS   = $(INCS) -m32 -g3
+RM       = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+welcome.o: welcome.c
+	$(CC) -c welcome.c -o welcome.o $(CFLAGS)
+
+deal_with_file.o: deal_with_file.c
+	$(CC) -c deal_with_file.c -o deal_with_file.o $(CFLAGS)
+
+login_registered.o: login_registered.c
+	$(CC) -c login_registered.c -o login_registered.o $(CFLAGS)
+
+function_menu.o: function_menu.c
+	$(CC) -c function_menu.c -o function_menu.o $(CFLAGS)
+
+function.o: function.c
+	$(CC) -c function.c -o function.o $(CFLAGS)
+
+myAI.o: myAI.c
+	$(CC) -c myAI.c -o myAI.o $(CFLAGS)
+
+desert.o: desert.c
+	$(CC) -c desert.c -o desert.o $(CFLAGS)
+
+end.o: end.c
+	$(CC) -c end.c -o end.o $(CFLAGS)
+
+pre_progress.o: pre_progress.c
+	$(CC) -c pre_progress.c -o pre_progress.o $(CFLAGS)
+
+tools.o: tools.c
+	$(CC) -c tools.c -o tools.o $(CFLAGS)
+
+calculator.o: calculator.c
+	$(CC) -c calculator.c -o calculator.o $(CFLAGS)
+
+probality.o: probality.c
+	$(CC) -c probality.c -o probality.o $(CFLAGS)
+
+find_ch.o: find_ch.c
+	$(CC) -c find_ch.c -o find_ch.o $(CFLAGS)
+
+entertainment.o: entertainment.c
+	$(CC) -c entertainment.c -o entertainment.o $(CFLAGS)
+
+modify.o: modify.c
+	$(CC) -c modify.c -o modify.o $(CFLAGS)
+
+login.o: login.c
+	$(CC) -c login.c -o login.o $(CFLAGS)
+
+registered.o: registered.c
+	$(CC) -c registered.c -o registered.o $(CFLAGS)
+
+notpad.o: notpad.c
+	$(CC) -c notpad.c -o notpad.o $(CFLAGS)
+
+newtxt.o: newtxt.c
+	$(CC) -c newtxt.c -o newtxt.o $(CFLAGS)
+
+notpad_looktxt.o: notpad_looktxt.c
+	$(CC) -c notpad_looktxt.c -o notpad_looktxt.o $(CFLAGS)
+
+deletetxt.o: deletetxt.c
+	$(CC) -c deletetxt.c -o deletetxt.o $(CFLAGS)
+
+renametxt.o: renametxt.c
+	$(CC) -c renametxt.c -o renametxt.o $(CFLAGS)
+
+mathematic.o: mathematic.c
+	$(CC) -c mathematic.c -o mathematic.o $(CFLAGS)
+
+math_test.o: math_test.c
+	$(CC) -c math_test.c -o math_test.o $(CFLAGS)
+
+math_error.o: math_error.c
+	$(CC) -c math_error.c -o math_error.o $(CFLAGS)
+
+game_tsp.o: game_tsp.c
+	$(CC) -c game_tsp.c -o game_tsp.o $(CFLAGS)
+
+algorithm.o: algorithm.c
+	$(CC) -c algorithm.c -o algorithm.o $(CFLAGS)
+
+roll_chess.o: roll_chess.c
+	$(CC) -c roll_chess.c -o roll_chess.o $(CFLAGS)
+
+console.o: console.c
+	$(CC) -c console.c -o console.o $(CFLAGS)
+
+literature.o: literature.c
+	$(CC) -c literature.c -o literature.o $(CFLAGS)
+
+literature_administrator.o: literature_administrator.c
+	$(CC) -c literature_administrator.c -o literature_administrator.o $(CFLAGS)

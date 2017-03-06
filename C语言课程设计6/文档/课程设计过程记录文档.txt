@@ -1,0 +1,32 @@
+撰写需求分析
+程序欢迎界面
+makefile.win 显示有错，重写
+
+main.c
+welcome.c//欢迎函数
+deal_with_file.c 文件，
+	show_txt函数
+
+编译环境Dev-C++ 5.60
+生成一个.dev文件，每次打开它，所有的其他文件（除了手动关闭的）都打开了
+其他文件中的结构体不会直接引用，我得包含那个定义结构体的文件才能使用，应该是变量的作用域，没掌握好。
+Id return 1 exit status.
+
+macro 宏
+library file 库文件
+
+#帮助理解makefile.win文件
+0 #It is a example for discribing makefile 注释行
+1 prog: filea.o fileb.o filec.o #指定prog由三个目标文件filea.o fileb.o filec.o链接生成
+2 cc filea.o fileb.o filec.o #如何从prog所依赖的文件建立可执行文件
+3 filea.o: filea.c a.h defs #指定filea.o目标文件，以及它们所依赖的.c 和.h文件以及defs文件
+#其中假设filea.c和fileb.c都要声明用到一个名为defs的文件，但filec.c不用
+4 cc -c filea.c #如何从目标所依赖的文件目标，即如何从filea.c建立filea.o
+5 fileb.o: fileb.c b.h defs #指定fileb.o目标文件，以及它们所依赖的.c和.h文件以及defs文件
+#与fileb.o意思类似
+6 cc -c fileb.c #如何从目标所依赖的文件建立目标，即如何从fileb.c建立fileb.o
+#与4相似
+7 filec.o: filec.c c.h
+8 cc -c file.c 
+
+Makefile中的"$@","$^",$<"称为自动变量。
